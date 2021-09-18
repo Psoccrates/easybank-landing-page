@@ -1,0 +1,158 @@
+:root {
+  --color-primary-gradient: linear-gradient(to right, #33d35e, #2ab6d9);
+  --color-primary: #30c88f;
+  --color-headings: #2d314d;
+  --color-body: #9597a5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  /* 62.5% is 10px */
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+}
+
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.paragraph__header,
+.paragraph__feature {
+  color: var(--color-body);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  .paragraph__header {
+    font-size: 1.8rem;
+  }
+
+  .paragraph__feature {
+    font-size: 1.6rem;
+  }
+}
+/* Buttons */
+.btn {
+  height: 4.4rem;
+  width: 16.3rem;
+  cursor: pointer;
+}
+
+.btn--primary-gradient {
+  border: 0;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary-gradient);
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Icons */
+.icon-container {
+  background: var(--color-primary-gradient);
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+}
+
+.icon--primary {
+  fill: #fff;
+}
+
+/* Cards */
+.card__feature {
+  padding-bottom: 5rem;
+  text-align: center;
+  margin: 0 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card__feature {
+    text-align: left;
+  }
+}
+
+/* Headers */
+.feature__header {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin: 0 2.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__header {
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/* Grids */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1250px;
+    margin: auto;
+  }
+}
+
+/* Features Block */
+.feature {
+  background: #f4f5f7;
+}
