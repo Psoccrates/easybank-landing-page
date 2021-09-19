@@ -24,12 +24,14 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--color-headings);
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 400;
 }
 
@@ -41,6 +43,15 @@ h3 {
   font-size: 2rem;
 }
 
+h4 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+address {
+  font-size: 1rem;
+  font-style: normal;
+}
 .paragraph__header,
 .paragraph__feature {
   color: var(--color-body);
@@ -48,6 +59,11 @@ h3 {
   font-weight: 400;
 }
 
+.paragraph__article {
+  color: var(--color-body);
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 4rem;
@@ -103,6 +119,16 @@ h3 {
   fill: #fff;
 }
 
+/* Images */
+.images__article {
+  max-width: 32.7rem;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
 /* Cards */
 .card__feature {
   padding-bottom: 5rem;
@@ -116,6 +142,19 @@ h3 {
   }
 }
 
+.card__article {
+  width: 32.7rem;
+}
+
+.card__article--skin {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card__article__body {
+  padding: 2.5rem;
+  width: auto;
+}
 /* Headers */
 .feature__header {
   padding-top: 5rem;
@@ -133,7 +172,6 @@ h3 {
 }
 
 /* Grids */
-
 .grid {
   display: grid;
 }
