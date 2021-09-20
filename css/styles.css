@@ -81,6 +81,18 @@ address {
     font-size: 1.6rem;
   }
 }
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s ease-in;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
 /* Buttons */
 .btn {
   height: 4.4rem;
@@ -123,7 +135,7 @@ address {
 .images__article {
   max-width: 32.7rem;
   width: 100%;
-  height: auto;
+  height: 20rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
@@ -144,6 +156,7 @@ address {
 
 .card__article {
   width: 32.7rem;
+  height: auto;
 }
 
 .card__article--skin {
@@ -155,6 +168,18 @@ address {
   padding: 2.5rem;
   width: auto;
 }
+@media screen and (max-width: 330px) {
+  .card__article {
+    width: 25rem;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .card__article {
+    width: 25.5rem;
+  }
+}
+
 /* Headers */
 .feature__header {
   padding-top: 5rem;
@@ -163,10 +188,17 @@ address {
   margin: 0 2.4rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .feature__header {
+.article__header {
+  padding-top: 6rem;
+  text-align: center;
+  margin: 0 2.4rem;
+}
+
+@media screen and (min-width: 1124px) {
+  .feature__header,
+  .article__header {
     text-align: left;
-    max-width: 1200px;
+    max-width: 1110px;
     margin: auto;
   }
 }
@@ -174,23 +206,31 @@ address {
 /* Grids */
 .grid {
   display: grid;
+  margin: auto;
+  justify-items: center;
+  row-gap: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1124px) {
   .grid--1x3 {
     grid-template-columns: repeat(4, 1fr);
-    max-width: 1250px;
-    margin: auto;
+    max-width: 1110px;
   }
 }
 
-/* Features Block */
+/* Blocks*/
 .feature {
   background: #f4f5f7;
+}
+
+.article__block {
+  background: #fafafa;
+  padding-bottom: 7rem;
 }
