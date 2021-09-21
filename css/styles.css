@@ -109,6 +109,11 @@ a:hover {
   background: var(--color-primary-gradient);
   white-space: nowrap;
   text-align: center;
+  transition: opacity 0.5s ease-in;
+}
+
+.btn--primary-gradient:hover {
+  opacity: 0.5;
 }
 
 /* Icons */
@@ -139,6 +144,53 @@ a:hover {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Navigation Bar */
+
+@media screen and (min-width: 768px) {
+  .nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1090px;
+  }
+}
+.nav__item {
+  display: inline-block;
+  position: relative;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: var(--color-body);
+}
+
+.nav__item > a:hover {
+  color: #2d314d;
+}
+
+.nav__item > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--color-primary-gradient);
+  transition: width 0.5s ease-in;
+}
+
+.nav__item > a:hover::after {
+  width: 100%;
 }
 
 /* Cards */
