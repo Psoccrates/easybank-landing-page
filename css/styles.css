@@ -132,9 +132,9 @@ a:hover {
   height: 72px;
 }
 
-.icon--primary {
+/*.icon--primary {
   fill: #fff;
-}
+} */
 
 /* Images */
 .images__article {
@@ -152,36 +152,69 @@ a:hover {
   padding-left: 0;
 }
 
-/* Navigation Bar */
+/* Collapsibles */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
 
-@media screen and (min-width: 768px) {
-  .nav {
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 1090px;
-  }
+.collapsible__hamburger-icon {
+  cursor: pointer;
+  height: 100%;
+  transition: transform 0.5s ease-in;
+}
+
+.collapsible__hamburger-icon:hover {
+  transform: scale(1.5);
+}
+
+/* Navigation Bar */
+.nav {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  max-width: 1070px;
+}
+
+.list-container--outer {
+  display: block;
+  margin: auto;
+}
+
+.nav__list-container {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 .nav__item {
-  display: inline-block;
   position: relative;
-  padding: 2rem;
-  font-size: 1.4rem;
-  color: var(--color-body);
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: var(--color-headings);
+  width: 100%;
+  transition: color 0.5s ease-in;
 }
 
 .nav__item > a:hover {
-  color: #2d314d;
+  color: var(--color-primary);
 }
 
 .nav__item > a::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 40%;
   bottom: 0;
   width: 0%;
   height: 4px;
@@ -190,7 +223,31 @@ a:hover {
 }
 
 .nav__item > a:hover::after {
-  width: 100%;
+  width: 20%;
+}
+
+.btn--nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible__hamburger-icon {
+    display: none;
+  }
+
+  .nav__list-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn--nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .collapsible__content {
+    display: flex;
+  }
 }
 
 /* Cards */
