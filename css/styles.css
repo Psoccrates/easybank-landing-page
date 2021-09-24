@@ -3,6 +3,8 @@
   --color-primary: #30c88f;
   --color-headings: #2d314d;
   --color-body: #9597a5;
+  --background-color-primary: #fafafa;
+  --backround-color-secondary: #f4f4f4;
 }
 
 *,
@@ -278,7 +280,7 @@ a:hover {
 
 /* Hero */
 .hero__image {
-  background: #f2f2f2;
+  background: var(--background-color-primary);
   height: 80rem;
   background-image: url("/images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
@@ -359,9 +361,6 @@ a:hover {
 .card__article {
   width: 32.7rem;
   height: auto;
-}
-
-.card__article--skin {
   background: #fff;
   border-radius: 10px;
 }
@@ -395,13 +394,23 @@ a:hover {
   text-align: center;
   margin: 0 2.4rem;
 }
-
+@media screen and (min-width: 768px) {
+  .feature__header {
+    max-width: 700px;
+    margin: auto;
+  }
+}
 @media screen and (min-width: 1124px) {
   .feature__header,
   .article__header {
     text-align: left;
     max-width: 1110px;
     margin: auto;
+    padding-left: 10px;
+  }
+
+  .feature__header {
+    padding-right: 450px;
   }
 }
 
@@ -421,19 +430,19 @@ a:hover {
 }
 
 @media screen and (min-width: 1124px) {
-  .grid--1x3 {
+  .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1110px;
   }
 }
 
-/* Blocks*/
+/* Blocks or Sections*/
 .feature {
-  background: #f4f5f7;
+  background: var(--backround-color-secondary);
 }
 
 .article__block {
-  background: #fafafa;
+  background: var(--background-color-primary);
   padding-bottom: 7rem;
 }
 
