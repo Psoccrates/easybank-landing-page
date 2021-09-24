@@ -15,24 +15,46 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <section class="hero__image">
-      <div class="grid grid--1x2 grid--1x3"></div>
-          <div class="image-mockup-container">
-            <img class="image-mockup" src="/images/image-mockups.png" alt="" />
-          </div>
-        <div class="hero__content">
-          <h1>Next generation digital banking</h1>
-          <p class="paragraph__header">
-            Take your financial life online. Your Easybank account will be a
-            one-stop-shop for spending, saving, budgeting, investing, and much
-            more.
-          </p>
-          <button type="button" class="btn btn--primary-gradient">
+    <header class="hero">
+      <nav class="nav collapsible collapsible--expanded">
+        <img src="/images/logo.svg" alt="Easybank Logo" />
+        <img
+          class="collapsible__hamburger-icon"
+          src="/images/icon-hamburger.svg"
+          alt="Navigation Toggler"
+        />
+        <div class="collapsible__content">
+          <ul class="list nav__list-container">
+            <li class="nav__item"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">Contact</a></li>
+            <li class="nav__item"><a href="#">Blog</a></li>
+            <li class="nav__item"><a href="#">Careers</a></li>
+          </ul>
+          <button type="button" class="btn btn--primary-gradient btn--nav">
             Request Invite
           </button>
         </div>
-      </div>
-    </section>
+      </nav>
+      <section class="hero__image">
+        <div class="grid grid--1x2 grid--1x3"></div>
+            <div class="image-mockup-container">
+              <img class="image-mockup" src="/images/image-mockups.png" alt="" />
+            </div>
+          <div class="hero__content">
+            <h1>Next generation digital banking</h1>
+            <p class="paragraph__header">
+              Take your financial life online. Your Easybank account will be a
+              one-stop-shop for spending, saving, budgeting, investing, and much
+              more.
+            </p>
+            <button type="button" class="btn btn--primary-gradient">
+              Request Invite
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
     <script src="/js/main.js"></script>
   </body>
 </html>
