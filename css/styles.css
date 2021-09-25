@@ -31,6 +31,12 @@ h4 {
   color: var(--color-headings);
 }
 
+h1,
+h2 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
 h2,
 h3,
 h4 {
@@ -71,6 +77,9 @@ address {
   margin: 0.5rem 0;
 }
 
+.paragraph__header {
+  margin-bottom: 3.5rem;
+}
 .footer__item,
 .paragraph__footer {
   color: #fff;
@@ -127,8 +136,9 @@ a:hover {
 .btn--primary-gradient {
   border: 0;
   border-radius: 25px;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   color: #fff;
   background: var(--color-primary-gradient);
   white-space: nowrap;
@@ -159,10 +169,6 @@ a:hover {
 .icon--white {
   fill: #fff;
 }
-
-/*.icon--primary {
-  fill: #fff;
-} */
 
 /* Images */
 .images__article {
@@ -279,20 +285,26 @@ a:hover {
 }
 
 /* Hero */
-.hero__image {
+.hero__content-container {
   background: var(--background-color-primary);
-  height: 80rem;
+}
+
+.hero__image {
+  height: 65rem;
   background-image: url("/images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
   background-position: top -60px right;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .image-mockup-container {
   position: absolute;
   height: 39rem;
   width: 35rem;
-  border: solid 1px gold;
   right: 12px;
+  border: solid 5px gold;
+  position: top right;
 }
 
 .image-mockup {
@@ -336,7 +348,8 @@ a:hover {
   .image-mockup-container {
     height: 80rem;
     width: auto;
-    margin-right: -125px;
+    /*margin-right: -125px;*/
+    object-position: absolute;
   }
 
   .hero__content {
@@ -349,7 +362,7 @@ a:hover {
 .card__feature {
   padding-bottom: 5rem;
   text-align: center;
-  margin: 0 2.4rem;
+  width: 25rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -367,6 +380,7 @@ a:hover {
 
 .card__article__body {
   padding: 2.5rem;
+  margin-bottom: 1.5rem;
   width: auto;
 }
 @media screen and (max-width: 330px) {
@@ -383,23 +397,19 @@ a:hover {
 
 /* Headers */
 .feature__header {
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding: 5rem 2rem;
   text-align: center;
-  margin: 0 2.4rem;
+  margin: auto;
+  max-width: 480px;
 }
 
 .article__header {
   padding-top: 6rem;
+  padding-bottom: 2rem;
   text-align: center;
   margin: 0 2.4rem;
 }
-@media screen and (min-width: 768px) {
-  .feature__header {
-    max-width: 700px;
-    margin: auto;
-  }
-}
+
 @media screen and (min-width: 1124px) {
   .feature__header,
   .article__header {
