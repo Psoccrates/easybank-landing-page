@@ -115,6 +115,7 @@ address {
     font-size: 5.6rem;
   }
 }
+
 /* Links */
 a {
   text-decoration: none;
@@ -159,15 +160,6 @@ a:hover {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
-
-.icon {
-  width: 72px;
-  height: 72px;
-}
-
-.icon--white {
-  fill: #fff;
 }
 
 /* Images */
@@ -464,9 +456,64 @@ a:hover {
 
 .footer__list {
   text-align: center;
-  margin-bottom: 0;
 }
 
 .footer__item {
   margin: 1rem;
+}
+
+.footer__logo {
+  margin-top: 3rem;
+}
+
+.btn__footer {
+  margin-top: 0;
+  padding-left: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .flex__footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+  }
+
+  .footer__list {
+    align-self: flex-end;
+    text-align: right;
+    margin-top: -11rem;
+  }
+
+  .btn__footer {
+    margin-top: -12rem;
+    margin-bottom: -2rem;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .flex__footer {
+    max-width: 1110px;
+  }
+
+  .footer__list {
+    align-self: center;
+    columns: 20rem 2;
+    text-align: left;
+  }
+
+  .btn__footer,
+  .paragraph__footer {
+    align-self: flex-end;
+  }
+  .btn__footer {
+    padding-right: 2rem;
+  }
+
+  .footer__item--first {
+    margin-top: -1rem;
+  }
+
+  .footer__icons {
+    margin-top: 2rem;
+  }
 }
