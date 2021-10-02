@@ -1,34 +1,26 @@
-<nav class="nav">
-  <img src="/images/logo.svg" alt="Easybank" />
-  <ul class="list">
-    <li class="nav__item"><a href="#">Home</a></li>
-    <li class="nav__item"><a href="#">About</a></li>
-    <li class="nav__item"><a href="#">Contact</a></li>
-    <li class="nav__item"><a href="#">Blog</a></li>
-    <li class="nav__item"><a href="#">Careers</a></li>
-  </ul>
-  <button type="button" class="btn btn--primary-gradient">
-    Request Invite
-  </button>
-</nav>
-
-<nav class="nav collapsible collapsible--expanded">
-  <img src="/images/logo.svg" alt="Easybank Logo" />
-  <img
-    class="collapsible__hamburger-icon"
-    src="/images/icon-hamburger.svg"
-    alt="Navigation Toggler"
-  />
-  <div class="collapsible__content">
-    <ul class="list nav__list-container">
-      <li class="nav__item"><a href="#">Home</a></li>
-      <li class="nav__item"><a href="#">About</a></li>
-      <li class="nav__item"><a href="#">Contact</a></li>
-      <li class="nav__item"><a href="#">Blog</a></li>
-      <li class="nav__item"><a href="#">Careers</a></li>
-    </ul>
+<header class="hero">
+  <nav class="nav">
+    <img src="/images/logo.svg" alt="Easybank Logo" />
+    <button id="openModalImage" class="btn__modal-open">
+      <img src="/images/icon-hamburger.svg" alt="Navigation Toggler" />
+    </button>
+    <button id="closeModalImage" class="btn__modal-close">
+      <img src="/images/icon-close.svg" alt="Close Navigation Menu" />
+    </button>
+    <div class="modal" id="navModal">
+      <div class="modal__content">
+        <ul class="list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+          <li class="nav__item"><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
     <button type="button" class="btn btn--primary-gradient btn--nav">
       Request Invite
     </button>
-  </div>
-</nav>
+  </nav>
+</header>
+<script src="/js/main.js"></script>
