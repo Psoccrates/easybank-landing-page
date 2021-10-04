@@ -93,6 +93,10 @@ address {
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5.6rem;
+  }
+
   h2 {
     font-size: 4rem;
   }
@@ -110,12 +114,6 @@ address {
   }
 }
 
-@media screen and (min-width: 1124px) {
-  h1 {
-    font-size: 5.6rem;
-  }
-}
-
 /* Links */
 a {
   text-decoration: none;
@@ -129,8 +127,6 @@ a:hover {
 
 /* Buttons */
 .btn {
-  height: 4.4rem;
-  width: 16.3rem;
   cursor: pointer;
 }
 
@@ -144,11 +140,52 @@ a:hover {
   background: var(--color-primary-gradient);
   white-space: nowrap;
   text-align: center;
+  height: 4.4rem;
+  width: 16.3rem;
   transition: opacity 0.5s ease-in;
 }
 
 .btn--primary-gradient:hover {
   opacity: 0.5;
+}
+
+.btn--nav {
+  display: none;
+}
+
+.btn__footer {
+  margin-top: 0;
+  padding-left: 2.5rem;
+}
+
+.btn__modal--open,
+.btn__modal--close {
+  border: 0;
+  background: none;
+}
+
+.btn__modal--close > img,
+.btn__modal--open > img {
+  height: 15px;
+  transition: height 0.75s ease-in;
+}
+
+.btn__modal--close > img:hover,
+.btn__modal--open > img:hover {
+  height: 25px;
+}
+
+@media screen and (min-width: 1124px) {
+  .btn__modal--open > img,
+  .btn__modal--close > img {
+    display: none;
+  }
+
+  .btn--primary-gradient.btn--nav {
+    display: inline;
+    margin-top: -10px;
+    margin-right: 25px;
+  }
 }
 
 /* Icons */
@@ -160,6 +197,11 @@ a:hover {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.easybank-icon {
+  width: 13.9rem;
+  height: 2rem;
 }
 
 /* Images */
@@ -182,7 +224,7 @@ a:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   margin-top: 4rem;
   left: 0;
   height: 100%;
@@ -223,42 +265,37 @@ a:hover {
     opacity: 1;
   }
 }
+
+@media screen and (min-width: 1124px) {
+  .modal {
+    display: inline;
+    background: none;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  .modal__content {
+    width: 50rem;
+    height: auto;
+    margin: auto;
+    margin-top: -15px;
+  }
+}
 /* Navigation Bar */
-/*.nav {
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  max-width: 1070px;
-}*/
+
 .nav {
   background: #fff;
   display: flex;
   justify-content: space-between;
-  margin: auto;
   position: fixed;
-  top: 0;
-  height: 6rem;
+  padding-top: 8rem;
+  height: 80px;
   padding: 20px;
   width: 100%;
-  max-width: 700px;
+  margin: auto;
+  max-width: 1123px;
 }
 
-.list-container--outer {
-  display: block;
-  margin: auto;
-}
-
-.nav__list-container {
-  display: block;
-  text-align: center;
-  margin: auto;
-}
 .nav__item {
   position: relative;
   padding: 1rem;
@@ -287,64 +324,62 @@ a:hover {
   width: 20%;
 }
 
-.btn--nav {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .collapsible__hamburger-icon {
-    display: none;
+@media screen and (min-width: 1124px) {
+  .nav-container {
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
   }
 
-  .nav__list-container {
-    display: flex;
-    justify-content: space-between;
+  .nav {
+    max-width: 1124px;
+    height: 7rem;
   }
 
-  .btn--nav {
-    display: flex;
-    flex-direction: row;
+  .nav__item {
+    display: inline;
+    pointer-events: visible;
   }
 
-  .collapsible__content {
-    display: flex;
+  .nav__item > a::after {
+    left: 0;
+  }
+
+  .nav__item > a:hover::after {
+    width: 100%;
   }
 }
 
 /* Hero */
 .hero__content-container {
-  background: var(--background-color-primary);
-  margin-top: 6rem;
+  background-color: var(--background-color-primary);
 }
 
 .hero__image {
-  height: 65rem;
   background-image: url("/images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: top -60px right;
   max-width: 1440px;
   margin: auto;
 }
 
-.image-mockup-container {
-  position: absolute;
-  height: 39rem;
-  width: 35rem;
-  right: 12px;
-  border: solid 5px gold;
-  position: top right;
-}
-
 .image-mockup {
   object-position: center -125px;
+  margin-top: -10px;
   width: 100%;
 }
 
 .hero__content {
-  padding-top: 30rem;
   width: 32.7rem;
   text-align: center;
   margin: auto;
+  margin-top: -12rem;
+  padding-bottom: 8rem;
 }
 
 @media screen and (max-width: 330px) {
@@ -353,36 +388,44 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .hero__content {
-    align-content: center;
-    margin: 20px;
-    padding-top: 0;
+    width: 50rem;
   }
 
-  .hero__image {
-    height: 40rem;
+  .image-mockup {
+    margin-top: -150px;
   }
 }
 
-@media screen and (min-width: 1124px) {
-  .hero__image {
-    height: 65rem;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: top -250px right -425px;
+@media screen and (min-width: 768px) {
+  .hero__content-container {
+    height: 60rem;
   }
 
-  .image-mockup-container {
-    height: 80rem;
-    width: auto;
-    /*margin-right: -125px;*/
-    object-position: absolute;
+  .hero__image {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top -250px right -325px;
+    height: 92rem;
+    margin: auto;
+    max-width: 1400px;
+  }
+
+  .image-mockup {
+    margin-right: -280px;
+    object-fit: contain;
+    width: 75%;
+    margin-top: 0;
   }
 
   .hero__content {
     width: 44.7rem;
     text-align: left;
+    margin-top: 100px;
   }
 }
 
@@ -411,6 +454,7 @@ a:hover {
   margin-bottom: 1.5rem;
   width: auto;
 }
+
 @media screen and (max-width: 330px) {
   .card__article {
     width: 25rem;
@@ -474,6 +518,12 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 1124px) {
+  .grid--2x1__nav {
+    grid-template-columns: 4fr 6fr;
+  }
+}
+
 /* Blocks or Sections*/
 .feature {
   background: var(--backround-color-secondary);
@@ -500,11 +550,6 @@ a:hover {
 
 .footer__logo {
   margin-top: 3rem;
-}
-
-.btn__footer {
-  margin-top: 0;
-  padding-left: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -541,6 +586,7 @@ a:hover {
   .paragraph__footer {
     align-self: flex-end;
   }
+
   .btn__footer {
     padding-right: 2rem;
   }
