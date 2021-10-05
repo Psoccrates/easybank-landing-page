@@ -1,10 +1,10 @@
 :root {
-  --color-primary-gradient: linear-gradient(to right, #33d35e, #2ab6d9);
-  --color-primary: #30c88f;
-  --color-headings: #2d314d;
-  --color-body: #9597a5;
   --background-color-primary: #fafafa;
   --backround-color-secondary: #f4f4f4;
+  --color-body: #9597a5;
+  --color-headings: #2d314d;
+  --color-primary-gradient: linear-gradient(to right, #33d35e, #2ab6d9);
+  --color-primary: #30c88f;
 }
 
 *,
@@ -81,7 +81,8 @@ address {
   margin-bottom: 3.5rem;
 }
 .footer__item,
-.paragraph__footer {
+.paragraph__footer,
+.paragraph__footer--attribution {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
@@ -116,8 +117,8 @@ address {
 
 /* Links */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
   transition: color 0.5s ease-in;
 }
 
@@ -131,18 +132,18 @@ a:hover {
 }
 
 .btn--primary-gradient {
-  border: 0;
+  background: var(--color-primary-gradient);
   border-radius: 25px;
+  border: 0;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  color: #fff;
-  background: var(--color-primary-gradient);
-  white-space: nowrap;
-  text-align: center;
   height: 4.4rem;
-  width: 16.3rem;
+  letter-spacing: 0.5px;
+  text-align: center;
   transition: opacity 0.5s ease-in;
+  white-space: nowrap;
+  width: 16.3rem;
 }
 
 .btn--primary-gradient:hover {
@@ -160,8 +161,8 @@ a:hover {
 
 .btn__modal--open,
 .btn__modal--close {
-  border: 0;
   background: none;
+  border: 0;
 }
 
 .btn__modal--close > img,
@@ -183,20 +184,20 @@ a:hover {
 
   .btn--primary-gradient.btn--nav {
     display: inline;
-    margin-top: -10px;
     margin-right: 25px;
+    margin-top: -10px;
   }
 }
 
 /* Icons */
 .icon-container {
+  align-items: center;
   background: var(--color-primary-gradient);
-  width: 72px;
-  height: 72px;
   border-radius: 100%;
   display: inline-flex;
+  height: 72px;
   justify-content: center;
-  align-items: center;
+  width: 72px;
 }
 
 .easybank-icon {
@@ -206,12 +207,12 @@ a:hover {
 
 /* Images */
 .images__article {
-  max-width: 32.7rem;
-  width: 100%;
-  height: 20rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  height: 20rem;
+  max-width: 32.7rem;
   object-fit: cover;
+  width: 100%;
 }
 
 /* Lists */
@@ -222,39 +223,39 @@ a:hover {
 
 /* Modal for Navigation Menu */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 5;
-  margin-top: 4rem;
-  left: 0;
-  height: 100%;
-  width: 100%;
   background: rgba(149, 151, 165, 0.75);
+  display: none;
+  height: 100%;
+  left: 0;
+  margin-top: 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 .modal__content {
   background: #fff;
+  border-radius: 5px;
+  height: 26.5rem;
   margin: 2rem auto;
+  padding-top: 0.5rem;
   text-align: center;
   width: 32.7rem;
-  height: 26.5rem;
-  padding-top: 0.5rem;
-  border-radius: 5px;
 }
 
 .modal__content,
 #openModalImage {
-  animation-name: modal-open;
   animation-duration: 1s;
+  animation-name: modal-open;
 }
 #openModalImage {
-  display: inline-flex;
   align-self: flex-end;
+  display: inline-flex;
 }
 
 #closeModalImage {
-  display: none;
   align-self: flex-end;
+  display: none;
 }
 
 @keyframes modal-open {
@@ -268,41 +269,41 @@ a:hover {
 
 @media screen and (min-width: 1124px) {
   .modal {
-    display: inline;
     background: none;
+    display: inline;
     margin: 0;
     pointer-events: none;
   }
 
   .modal__content {
-    width: 50rem;
     height: auto;
-    margin: auto;
     margin-top: -15px;
+    margin: auto;
+    width: 50rem;
   }
 }
-/* Navigation Bar */
 
+/* Navigation Bar */
 .nav {
   background: #fff;
   display: flex;
-  justify-content: space-between;
-  position: fixed;
-  padding-top: 8rem;
   height: 80px;
-  padding: 20px;
-  width: 100%;
+  justify-content: space-between;
   margin: auto;
   max-width: 1123px;
+  padding-top: 8rem;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
 }
 
 .nav__item {
-  position: relative;
-  padding: 1rem;
-  font-size: 1.8rem;
   color: var(--color-headings);
-  width: 100%;
+  font-size: 1.8rem;
+  padding: 1rem;
+  position: relative;
   transition: color 0.5s ease-in;
+  width: 100%;
 }
 
 .nav__item > a:hover {
@@ -310,14 +311,14 @@ a:hover {
 }
 
 .nav__item > a::after {
-  content: "";
-  position: absolute;
-  left: 40%;
-  bottom: 0;
-  width: 0%;
-  height: 4px;
   background: var(--color-primary-gradient);
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 40%;
+  position: absolute;
   transition: width 0.5s ease-in;
+  width: 0%;
 }
 
 .nav__item > a:hover::after {
@@ -326,18 +327,18 @@ a:hover {
 
 @media screen and (min-width: 1124px) {
   .nav-container {
-    background: #fff;
-    position: relative;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    background: #fff;
+    display: flex;
     height: 80px;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
   }
 
   .nav {
-    max-width: 1124px;
     height: 7rem;
+    max-width: 1124px;
   }
 
   .nav__item {
@@ -361,25 +362,25 @@ a:hover {
 
 .hero__image {
   background-image: url("/images/bg-intro-mobile.svg");
+  background-position: top -60px right;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top -60px right;
-  max-width: 1440px;
   margin: auto;
+  max-width: 1440px;
 }
 
 .image-mockup {
-  object-position: center -125px;
   margin-top: -10px;
+  object-position: center -125px;
   width: 100%;
 }
 
 .hero__content {
-  width: 32.7rem;
-  text-align: center;
-  margin: auto;
   margin-top: -12rem;
+  margin: auto;
   padding-bottom: 8rem;
+  text-align: center;
+  width: 32.7rem;
 }
 
 @media screen and (max-width: 330px) {
@@ -404,28 +405,28 @@ a:hover {
   }
 
   .hero__image {
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: top -250px right -325px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: top -250px right -325px;
     height: 92rem;
+    justify-content: space-between;
     margin: auto;
     max-width: 1400px;
   }
 
   .image-mockup {
     margin-right: -280px;
+    margin-top: 0;
     object-fit: contain;
     width: 75%;
-    margin-top: 0;
   }
 
   .hero__content {
-    width: 44.7rem;
-    text-align: left;
     margin-top: 100px;
+    text-align: left;
+    width: 44.7rem;
   }
 }
 
@@ -443,15 +444,15 @@ a:hover {
 }
 
 .card__article {
-  width: 32.7rem;
-  height: auto;
   background: #fff;
   border-radius: 10px;
+  height: auto;
+  width: 32.7rem;
 }
 
 .card__article__body {
-  padding: 2.5rem;
   margin-bottom: 1.5rem;
+  padding: 2.5rem;
   width: auto;
 }
 
@@ -469,26 +470,26 @@ a:hover {
 
 /* Headers */
 .feature__header {
-  padding: 5rem 2rem;
-  text-align: center;
   margin: auto;
   max-width: 480px;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .article__header {
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  text-align: center;
   margin: 0 2.4rem;
+  padding-bottom: 2rem;
+  padding-top: 6rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 1124px) {
   .feature__header,
   .article__header {
-    text-align: left;
-    max-width: 1110px;
     margin: auto;
+    max-width: 1110px;
     padding-left: 10px;
+    text-align: left;
   }
 
   .feature__header {
@@ -499,8 +500,8 @@ a:hover {
 /* Grids */
 .grid {
   display: grid;
-  margin: auto;
   justify-items: center;
+  margin: auto;
   row-gap: 2.5rem;
 }
 
@@ -561,13 +562,13 @@ a:hover {
 
   .footer__list {
     align-self: flex-end;
-    text-align: right;
     margin-top: -11rem;
+    text-align: right;
   }
 
   .btn__footer {
-    margin-top: -12rem;
     margin-bottom: -2rem;
+    margin-top: -12rem;
   }
 }
 

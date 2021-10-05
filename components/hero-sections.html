@@ -1,43 +1,43 @@
-<header class="hero">
-  <nav class="nav collapsible collapsible--expanded">
-    <img src="/images/logo.svg" alt="Easybank Logo" />
-    <img
-      class="collapsible__hamburger-icon"
-      src="/images/icon-hamburger.svg"
-      alt="Navigation Toggler"
-    />
-    <div class="collapsible__content">
-      <ul class="list nav__list-container">
-        <li class="nav__item"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
-        <li class="nav__item"><a href="#">Blog</a></li>
-        <li class="nav__item"><a href="#">Careers</a></li>
-      </ul>
+<header>
+  <div class="nav-container">
+    <nav class="nav">
+      <img class="easybank-icon" src="/images/logo.svg" alt="Easybank Logo" />
+      <button id="openModalImage" class="btn btn__modal--open">
+        <img src="/images/icon-hamburger.svg" alt="Navigation Toggler" />
+      </button>
+      <button id="closeModalImage" class="btn btn__modal--close">
+        <img src="/images/icon-close.svg" alt="Close Navigation Menu" />
+      </button>
+      <div class="modal" id="navModal">
+        <div class="modal__content">
+          <ul class="list">
+            <li class="nav__item"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">Contact</a></li>
+            <li class="nav__item"><a href="#">Blog</a></li>
+            <li class="nav__item"><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
       <button type="button" class="btn btn--primary-gradient btn--nav">
         Request Invite
       </button>
-    </div>
-  </nav>
-  <div class="hero__content-container">
-    <section class="hero__image">
-      <div class="grid grid--1x2 grid--1x4"></div>
-          <div class="image-mockup-container">
-            <img class="image-mockup" src="/images/image-mockups.png" alt="" />
-          </div>
-        <div class="hero__content">
-          <h1>Next generation digital banking</h1>
-          <p class="paragraph__header">
-            Take your financial life online. Your Easybank account will be a
-            one-stop-shop for spending, saving, budgeting, investing, and much
-            more.
-          </p>
-          <button type="button" class="btn btn--primary-gradient">
-            Request Invite
-          </button>
-        </div>
-      </div>
-      
-    </section>
+    </nav>
   </div>
+  <section class="hero__content-container">
+    <div class="hero__image">
+      <img class="image-mockup" src="/images/image-mockups.png" alt="" />
+      <div class="hero__content">
+        <h1>Next generation digital banking</h1>
+        <p class="paragraph__header">
+          Take your financial life online. Your Easybank account will be a
+          one-stop-shop for spending, saving, budgeting, investing, and much
+          more.
+        </p>
+        <button type="button" class="btn btn--primary-gradient">
+          Request Invite
+        </button>
+      </div>
+    </div>
+  </section>
 </header>
