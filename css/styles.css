@@ -205,6 +205,11 @@ a:hover {
   height: 2rem;
 }
 
+.modal-icon--open,
+.modal-icon--close {
+  transform: translate(0, -20px);
+}
+
 /* Images */
 .images__article {
   border-top-left-radius: 10px;
@@ -248,6 +253,7 @@ a:hover {
   animation-duration: 1s;
   animation-name: modal-open;
 }
+
 #openModalImage {
   align-self: flex-end;
   display: inline-flex;
@@ -277,8 +283,8 @@ a:hover {
 
   .modal__content {
     height: 6rem;
-    margin-top: -20px;
     margin: auto;
+    transform: translate(0, -20px);
     width: 50rem;
   }
 }
