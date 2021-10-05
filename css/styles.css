@@ -276,8 +276,8 @@ a:hover {
   }
 
   .modal__content {
-    height: auto;
-    margin-top: -15px;
+    height: 6rem;
+    margin-top: -20px;
     margin: auto;
     width: 50rem;
   }
