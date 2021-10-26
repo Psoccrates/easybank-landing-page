@@ -81,8 +81,7 @@ address {
   margin-bottom: 3.5rem;
 }
 .footer__item,
-.paragraph__footer,
-.paragraph__footer--attribution {
+.paragraph__footer {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
