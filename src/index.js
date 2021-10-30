@@ -1,3 +1,7 @@
+import '/src/normalize.css';
+import '/src/styles.css';
+import 'font-awesome/css/font-awesome.css';
+
 // Get modal element, open and close modal
 const modal = document.getElementById('navModal');
 const openModalBtn = document.getElementById('openModalImage');
@@ -13,7 +17,6 @@ function openModal() {
     modal.style.display = 'block';
     openModalImage.style.display = 'none';
     closeModalImage.style.display = 'inline-flex';
-
 }
 
 //Function to close modal 

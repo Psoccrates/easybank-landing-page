@@ -19,8 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/src/normalize.css" />
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
     <!-- Hero -->
@@ -29,20 +29,20 @@
         <nav class="nav">
           <img
             class="easybank-icon"
-            src="/images/logo.svg"
+            src="/src/images/logo.svg"
             alt="Easybank Logo"
           />
           <button id="openModalImage" class="btn btn__modal--open">
             <img
               class="modal-icon--open"
-              src="/images/icon-hamburger.svg"
+              src="/src/images/icon-hamburger.svg"
               alt="Navigation Toggler"
             />
           </button>
           <button id="closeModalImage" class="btn btn__modal--close">
             <img
               class="modal-icon--close"
-              src="/images/icon-close.svg"
+              src="/src/images/icon-close.svg"
               alt="Close Navigation Menu"
             />
           </button>
@@ -64,7 +64,11 @@
       </div>
       <section class="hero__content-container">
         <div class="hero__image">
-          <img class="image-mockup" src="/images/image-mockups.png" alt="" />
+          <img
+            class="image-mockup"
+            src="/src/images/image-mockups.png"
+            alt=""
+          />
           <div class="hero__content">
             <h1>Next generation digital banking</h1>
             <p class="paragraph__header">
@@ -91,7 +95,7 @@
       <div class="grid grid--1x2 grid--1x4">
         <article class="card__feature">
           <span class="icon-container">
-            <img src="/images/icon-online.svg" alt="" />
+            <img src="/src/images/icon-online.svg" alt="" />
           </span>
           <h3>Online Banking</h3>
           <p class="paragraph__feature">
@@ -101,7 +105,7 @@
         </article>
         <article class="card__feature">
           <span class="icon-container">
-            <img src="/images/icon-budgeting.svg" alt="" />
+            <img src="/src/images/icon-budgeting.svg" alt="" />
           </span>
           <h3>Simple Budgeting</h3>
           <p class="paragraph__feature">
@@ -111,7 +115,7 @@
         </article>
         <article class="card__feature">
           <span class="icon-container">
-            <img src="/images/icon-onboarding.svg" alt="" />
+            <img src="/src/images/icon-onboarding.svg" alt="" />
           </span>
           <h3>Fast Onboarding</h3>
           <p class="paragraph__feature">
@@ -121,7 +125,7 @@
         </article>
         <article class="card__feature">
           <span class="icon-container">
-            <img src="/images/icon-api.svg" alt="" />
+            <img src="/src/images/icon-api.svg" alt="" />
           </span>
           <h3>Open API</h3>
           <p class="paragraph__feature">
@@ -139,11 +143,14 @@
       <div class="grid grid--1x2 grid--1x4">
         <article class="card__article">
           <picture>
-            <source type="image/webp" srcset="/images/image-currency.webp" />
-            <source type="image/jpg" srcset="/images/image-currency.jpg" />
+            <source
+              type="image/webp"
+              srcset="/src/images/image-currency.webp"
+            />
+            <source type="image/jpg" srcset="/src/images/image-currency.jpg" />
             <img
               class="images__article"
-              src="/images/image-currency.jpg"
+              src="/src/images/image-currency.jpg"
               alt="A pile of currency from various countries."
             />
           </picture>
@@ -158,11 +165,17 @@
         </article>
         <article class="card__article">
           <picture>
-            <source type="image/webp" srcset="/images/image-restaurant.webp" />
-            <source type="image/jpg" srcset="/images/image-restaurant.jpg" />
+            <source
+              type="image/webp"
+              srcset="/src/images/image-restaurant.webp"
+            />
+            <source
+              type="image/jpg"
+              srcset="/src/images/image-restaurant.jpg"
+            />
             <img
               class="images__article"
-              src="/images/image-currency.jpg"
+              src="/src/images/image-currency.jpg"
               alt="A pile of currency from various countries."
             />
           </picture>
@@ -177,11 +190,11 @@
         </article>
         <article class="card__article">
           <picture>
-            <source type="image/webp" srcset="/images/image-plane.webp" />
-            <source type="image/jpg" srcset="/images/image-plane.jpg" />
+            <source type="image/webp" srcset="/src/images/image-plane.webp" />
+            <source type="image/jpg" srcset="/src/images/image-plane.jpg" />
             <img
               class="images__article"
-              src="/images/image-plane.jpg"
+              src="/src/images/image-plane.jpg"
               alt="A pile of currency from various countries."
             />
           </picture>
@@ -196,11 +209,14 @@
         </article>
         <article class="card__article">
           <picture>
-            <source type="image/webp" srcset="/images/image-confetti.webp" />
-            <source type="image/jpg" srcset="/images/image-confetti.jpg" />
+            <source
+              type="image/webp"
+              srcset="/src/images/image-confetti.webp"
+            />
+            <source type="image/jpg" srcset="/src/images/image-confetti.jpg" />
             <img
               class="images__article"
-              src="/images/image-confetti.jpg"
+              src="/src/images/image-confetti.jpg"
               alt="A pile of currency from various countries."
             />
           </picture>
@@ -220,10 +236,12 @@
     <footer class="footer">
       <div class="grid flex__footer">
         <div class="footer__logo">
-          <img src="/images/logo-white.svg" alt="Easybank Logo" />
+          <img src="/src/images/logo-white.svg" alt="Easybank Logo" />
         </div>
         <div class="footer__icons">
-          <a href="#"><img src="/images/social-media-icons.svg" alt="" /></a>
+          <a href="#"
+            ><img src="/src/images/social-media-icons.svg" alt=""
+          /></a>
         </div>
         <section class="footer__list">
           <ul class="list footer__list--section-1">
@@ -243,6 +261,6 @@
         <p class="paragraph__footer">&copy; Easybank. All Rights Reserved</p>
       </div>
     </footer>
-    <script src="/src/main.js"></script>
+    <script src=""></script>
   </body>
 </html>

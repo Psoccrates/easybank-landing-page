@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
 :root {
   --background-color-primary: #fafafa;
   --backround-color-secondary: #f4f4f4;
@@ -366,7 +368,7 @@ a:hover {
 }
 
 .hero__image {
-  background-image: url("/images/bg-intro-mobile.svg");
+  background-image: url("/src/images/bg-intro-mobile.svg");
   background-position: top -60px right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -410,7 +412,7 @@ a:hover {
   }
 
   .hero__image {
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("/src/images/bg-intro-desktop.svg");
     background-position: top -250px right -325px;
     background-repeat: no-repeat;
     display: flex;
