@@ -1,3 +1,4 @@
+@import url("/src/normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 
 :root {
@@ -417,7 +418,7 @@ a:hover {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row-reverse;
-    height: 92rem;
+    height: 65rem;
     justify-content: space-between;
     margin: auto;
     max-width: 1400px;
@@ -434,6 +435,18 @@ a:hover {
     margin-top: 100px;
     text-align: left;
     width: 44.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__image {
+    height: 72rem;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .hero__image {
+    height: 92rem;
   }
 }
 

@@ -1,4 +1,3 @@
-import '/src/normalize.css';
 import '/src/styles.css';
 import 'font-awesome/css/font-awesome.css';
 

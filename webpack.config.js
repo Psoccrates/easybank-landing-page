@@ -37,7 +37,7 @@ module.exports = {
                 test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.)?$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'fonts/',
@@ -49,9 +49,14 @@ module.exports = {
             },
 
             {
-                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+                test: /\.(jpg|jpeg|gif|webp)$/i,
                 use: ['file-loader']
             },
+
+            {
+                test: /\.(png|svg)$/,
+            },
+
             {
                 test: /\.hbs$/,
                 use: ['handlebars-loader']
