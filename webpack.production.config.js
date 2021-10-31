@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -46,6 +47,11 @@ module.exports = {
             },
 
             {
+                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+                type: 'asset/resource'
+            },
+
+            {
                 test: /\.(jpg|jpeg|gif|webp)$/i,
                 use: ['file-loader']
             },
@@ -68,8 +74,15 @@ module.exports = {
             cleanOnceBeforeBuildPatterns: [
                 '**/*'
             ]
+        }),
+
+        new CopyPlugin({
+            patterns: [
+                {from: 'src/images', to: 'images'}
+            ]
 
         }),
+
         new HtmlWebpackPlugin({
             template: './src/index.hbs'
         }),

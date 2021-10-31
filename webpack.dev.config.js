@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -57,17 +58,31 @@ module.exports = {
             },
 
             {
-                test: /\.(jpg|jpeg|gif|webp)$/i,
-                use: ['file-loader']
+                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: '[name].[ext]',   
+                            outputPath : 'images/'   
+                        }
+                    }
+                ]
             },
 
-            {
+            /*{
                 test: /\.(png|svg)$/,
-            },
+                
+            },*/
 
             {
                 test: /\.hbs$/,
                 use: ['handlebars-loader']
+            },
+
+            {
+                test: /\.html$/,
+                use: ['html-loader']
             }
         ]
     },
@@ -75,12 +90,18 @@ module.exports = {
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: [
                 '**/*'
+            ]                             
+        }),
+
+        new CopyPlugin({
+            patterns: [
+                {from: 'src/images', to: 'images'}
             ]
 
         }),
-        new HtmlWebpackPlugin({
+        
+        new HtmlWebpackPlugin({ 
             template: './src/index.hbs'
         }),
     ],
-    watch: true,
 }
