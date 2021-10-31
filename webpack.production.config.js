@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { DEFAULT_ENCODING } = require('crypto');
 
 module.exports = {
     entry: './src/index.js',
@@ -48,7 +49,18 @@ module.exports = {
 
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-                type: 'asset/resource'
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            mimetype: 'image/svg',
+                            encoding: true
+                        }
+                    }
+                ]
+                
+
             },
 
             {
