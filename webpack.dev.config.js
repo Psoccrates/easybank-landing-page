@@ -1,24 +1,34 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
         publicPath: ''
     },
-    mode: 'none',
+    mode: 'development',
+    devServer: {
+        port: 9000,
+        static: {
+            directory: path.resolve(__dirname, './dist')
+        },
+
+        devMiddleware: {
+            index: 'index.html',
+            writeToDisk: true
+        }
+
+    },
 
     module: {
         rules: [
             {
                 test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, 'css-loader'
+                    'style-loader', 'css-loader'
                 ]     
             },
 
@@ -40,9 +50,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'fonts/',
-                          
-                            
+                            outputPath: 'fonts/',        
                         }
                     }
                 ]
@@ -64,11 +72,6 @@ module.exports = {
         ]
     },
     plugins: [
-      
-        new TerserPlugin(),
-        new MiniCssExtractPlugin({
-            filename: 'styles.[contenthash].css'
-        }),
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: [
                 '**/*'
