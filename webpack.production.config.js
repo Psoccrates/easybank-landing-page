@@ -74,5 +74,4 @@ module.exports = {
             template: './src/index.hbs'
         }),
     ],
-    watch: true,
 }
