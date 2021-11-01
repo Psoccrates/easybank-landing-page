@@ -72,10 +72,10 @@ module.exports = {
                 loader: 'handlebars-loader'
             },
 
-            /*{
+            {
                 test: /\.html$/i,
                 loader: "html-loader",
-            }*/
+            }
         ]
     },
     plugins: [
