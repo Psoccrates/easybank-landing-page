@@ -70,7 +70,12 @@ module.exports = {
             {
                 test: /\.hbs$/,
                 loader: 'handlebars-loader'
-            }
+            },
+
+            /*{
+                test: /\.html$/i,
+                loader: "html-loader",
+            }*/
         ]
     },
     plugins: [

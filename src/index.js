@@ -1,6 +1,6 @@
 import '/src/styles.css';
 import 'font-awesome/css/font-awesome.css';
-
+import html from '/src/index.hbs';
 
 // Get modal element, open and close modal
 const modal = document.getElementById('navModal');
