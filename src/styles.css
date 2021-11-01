@@ -369,7 +369,7 @@ a:hover {
 }
 
 .hero__image {
-  background-image: url("/dist/images/bg-intro-mobile.svg");
+  background-image: url("/src/images/bg-intro-mobile.svg");
   background-position: top -60px right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -413,7 +413,7 @@ a:hover {
   }
 
   .hero__image {
-    background-image: url("/dist/images/bg-intro-desktop.svg");
+    background-image: url("/src/images/bg-intro-desktop.svg");
     background-position: top -250px right -325px;
     background-repeat: no-repeat;
     display: flex;
