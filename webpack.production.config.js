@@ -20,7 +20,8 @@ module.exports = {
                 test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader, 'css-loader'
-                ]     
+                ],
+
             },
 
             {
@@ -49,32 +50,26 @@ module.exports = {
 
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-                use: [
+                type: 'asset/resource',
+                /*use: [
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 10000,
-                            mimetype: 'image/svg',
-                            encoding: true
+                            name: '[name].[ext]',   
+                            outputPath : 'images/'   
                         }
                     }
-                ]
-                
-
+                ]*/
             },
 
             {
                 test: /\.(jpg|jpeg|gif|webp)$/i,
-                use: ['file-loader']
-            },
-
-            {
-                test: /\.(png|svg)$/,
+                loader: 'file-loader'
             },
 
             {
                 test: /\.hbs$/,
-                use: ['handlebars-loader']
+                loader: 'handlebars-loader'
             }
         ]
     },

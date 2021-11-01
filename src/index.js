@@ -1,6 +1,7 @@
 import '/src/styles.css';
 import 'font-awesome/css/font-awesome.css';
 
+
 // Get modal element, open and close modal
 const modal = document.getElementById('navModal');
 const openModalBtn = document.getElementById('openModalImage');
