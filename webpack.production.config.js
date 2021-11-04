@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const { DEFAULT_ENCODING } = require('crypto');
 
 module.exports = {
@@ -50,16 +49,7 @@ module.exports = {
 
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-                type: 'asset/resource',
-                /*use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            name: '[name].[ext]',   
-                            outputPath : 'images/'   
-                        }
-                    }
-                ]*/
+                type: 'asset/resource'
             },
 
             {
@@ -82,17 +72,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'styles.[contenthash].css'
         }),
+
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: [
                 '**/*'
             ]
-        }),
-
-        new CopyPlugin({
-            patterns: [
-                {from: 'src/images', to: 'images'}
-            ]
-
         }),
 
         new HtmlWebpackPlugin({

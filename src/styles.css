@@ -1,5 +1,4 @@
 @import url("/src/normalize.css");
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 
 :root {
   --background-color-primary: #fafafa;
@@ -176,6 +175,12 @@ a:hover {
 .btn__modal--close > img:hover,
 .btn__modal--open > img:hover {
   height: 25px;
+}
+
+@media screen and (max-width: 1123px) {
+  .btn__footer {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 1124px) {

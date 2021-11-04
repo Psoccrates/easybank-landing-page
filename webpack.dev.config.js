@@ -59,30 +59,22 @@ module.exports = {
 
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            name: '[name].[ext]',   
-                            outputPath : 'images/'   
-                        }
-                    }
-                ]
+                type: 'asset/resource'
             },
 
-            /*{
-                test: /\.(png|svg)$/,
-                
-            },*/
+            {
+                test: /\.(jpg|jpeg|gif|webp)$/i,
+                loader: 'file-loader'
+            },
 
             {
                 test: /\.hbs$/,
-                use: ['handlebars-loader']
+                loader: 'handlebars-loader'
             },
 
             {
-                test: /\.html$/,
-                use: ['html-loader']
+                test: /\.html$/i,
+                loader: "html-loader",
             }
         ]
     },
